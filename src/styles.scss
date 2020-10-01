@@ -1,40 +1,92 @@
+// // Font Awesome 
+@import url('./assets/coded-files/icofont.css');
+
 // Import Fonts
- 
-
-@mixin font-face($font-family, $font-file, $font-weight ) {
-    @font-face {
-      font-family: $font-family;
-        src: url(#{$font-file}.woff) format('woff'),
-             url(#{$font-file}.woff2) format('woff2'),
-             url(#{$font-file}.ttf) format('truetype');
-      font-weight: #{$font-weight};
-    };
-  } 
-
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Regular', 'normal');
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Light', 'light');
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Medium', 'medium');
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Bold', 'bold');
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Semibold', 'semi-bold');
-  @include font-face('Graphik', '/src/assets/fonts/Graphik-Black', 'black');
-
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Thin', 'light');
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Light', 'normal');
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Medium', 'medium');
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Bold', 'bold');
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Semibold', 'semi-bold');
-  @include font-face('SF UI Display', '/src/assets/fonts/SFUIDisplay-Black', 'black');
-
-  @mixin icon-font($font-family, $font-file, $font-weight ) {
-    @font-face {
-      font-family: $font-family;
-      src: url(#{$font-file}.svg) format('svg');
-      font-weight: #{$font-weight};
-    };
+  @font-face{
+      font-family: 'Graphik';
+      src: url('./assets/fonts/Graphik-Black.woff') format('woff'),
+           url('./assets/fonts/Graphik-Black.woff2') format('woff2');
+      font-weight: 800;
   }
 
-  @include icon-font('icoFont', '/src/assets/fonts/icofont', 'normal');
+  @font-face{
+    font-family: 'Graphik';
+    src: url('./assets/fonts/Graphik-Bold.woff') format('woff'),
+         url('./assets/fonts/Graphik-Bold.woff2') format('woff2');
+    font-weight: 700;
+    }
 
+    @font-face{
+        font-family: 'Graphik';
+        src: url('./assets/fonts/Graphik-Semibold.woff') format('woff'),
+             url('./assets/fonts/Graphik-Semibold.woff2') format('woff2');
+        font-weight: 600;
+    }
+
+    @font-face{
+        font-family: 'Graphik';
+        src: url('./assets/fonts/Graphik-Medium.woff') format('woff'),
+             url('./assets/fonts/Graphik-Medium.woff2') format('woff2');
+        font-weight: 500;
+    }
+
+    @font-face{
+    font-family: 'Graphik';
+    src: url('./assets/fonts/Graphik-Regular.woff') format('woff'),
+         url('./assets/fonts/Graphik-Regular.woff2') format('woff2');
+    font-weight: 400;
+    }
+
+    @font-face{
+        font-family: 'Graphik';
+        src: url('./assets/fonts/Graphik-Light.woff') format('woff'),
+             url('./assets/fonts/Graphik-Light.woff2') format('woff2');
+        font-weight: 300;
+    } 
+
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Black.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Black.woff2') format('woff2');
+        font-weight: 800;
+    }
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Bold.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Bold.woff2') format('woff2');
+        font-weight: 700;
+    }
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Semibold.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Semibold.woff2') format('woff2');
+        font-weight: 500;
+    }
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Medium.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Medium.woff2') format('woff2');
+        font-weight: 500;
+    }
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Light.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Light.woff2') format('woff2');
+        font-weight: 400;
+    }
+
+    @font-face{
+        font-family: 'SF UI Display';
+        src: url('./assets/fonts/SFUIDisplay-Thin.woff') format('woff'),
+             url('./assets/fonts/SFUIDisplay-Thin.woff2') format('woff2');
+        font-weight: 300;
+    } 
+ 
 
 
 // Fonts
@@ -324,6 +376,37 @@ input[type="submit"] {
 .align_flex-start { align-items: flex-start;}
 .align_flex-end { align-items: flex-end;}
 
+/****************************************************************
+                           Main Body 
+****************************************************************/
+.siteWrapper { 
+    position: relative;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Responsive Media Queries CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -381,6 +464,10 @@ Responsive Media Queries CSS
             font-size: ($value)*0.5px+3px;
         }
     }
+    * + h1, * + h2 { margin-top:15px; }
+    * + h3, * + h4 { margin-top:10px; }
+    * + h5, * + h6  { margin-top:5px; }
+    * + p { margin-top:5px }
     // Unique Padding 
     // Bottom padding 
     @for $i from 4 through 15 {

@@ -1,0 +1,16 @@
+.hamburgBtnOuter { 
+    text-align: center; 
+    width: 25px;
+    cursor: pointer;
+    & > div { 
+        width: 100%; 
+        margin: 0 auto; 
+        height: 4px; 
+        background-color: #000;
+    }
+    & > div:nth-child(2) { width: 16px;}
+    & > div:nth-child(3) { width: 6px;}
+    & > div + div { 
+        margin-top: 4px;
+    }
+}

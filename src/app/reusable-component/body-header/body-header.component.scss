@@ -1,0 +1,21 @@
+.header_logo {
+    max-width: 200px;
+}
+.userProfile { 
+    width: calc( 50% - 200px );
+    .userProfileInner > div + div {
+        padding-left: 20px ;
+    }
+}
+ 
+.userAdress p {
+    margin: 0;
+} 
+
+.profileImage {
+    width: 42px;
+    height: 42px;
+    background: #d2d2d2;
+    padding: 4px;
+    border-radius: 10px;
+}
