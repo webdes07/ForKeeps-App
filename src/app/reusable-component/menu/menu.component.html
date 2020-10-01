@@ -1,42 +1,141 @@
 <div class="manuWrapper">
     <div class="menuButton">
-        <div class="hamburgBtnOuter" (click)="myClickFunction($event)">
+        <div class="hamburgBtnOuter" id="hamburdBtn" (click)="myClickFunction()">
             <div class="hamburgBtnInner"></div>
             <div class="hamburgBtnInner"></div>
             <div class="hamburgBtnInner"></div>
         </div>
-        <div class="navigationLinks">
-            <a href="javascrip:;"></a>
-            <div class="loginButton">
-                <div>
-                    <a href="javascript:;">
-                        <span class="icon"></span>
-                        <span>Login</span>
-                    </a>
+        <div class="navigationLinks" id="mainMenu">
+            <div class="navListInner">
+                <div class="loginButton">
+                    <div>
+                        <a href="javascript:;">
+                            <span class="icon"><i class="icofont-login"></i></span>
+                            <span>Login</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <ul>
-                <li>
-                    <div class="menuItemParent">
-                        <a href="javscript:;" class="firstLevel">
-                            <span class="icon"></span>
-                            <span>About</span>
-                        </a>
-                        <a href="javascript:;" class="childExpand">
-                            <span class="icon ionicIcons byDefault"></span>
-                            <span class="icon ionicIcons whenOpened"></span>
-                        </a>
+                <!-- <div class="closeBtn" >
+                    <span><i class="icofont-close" (click)="myClickFunction()"></i></span>
+                </div> -->
+                <ul>
+                    <li (click)="active = !active" [ngClass]="toggleClass()">
+                        <div class="menuItemParent">
+                            <a href="javscript:;" class="firstLevel">
+                                <span class="icon"><i class="icofont-home"></i></span>
+                                <span>Home</span>
+                            </a>
+                            <span class="childExpand">
+                                <span class="icon ionicIcons byDefault"><i class="icofont-rounded-down"></i></span>
+                            </span> 
+                        </div>
                         <ul class="subNavigation">
                             <li>
                                 <a href="javascript:;">
                                     <span>About ForKeeps</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
                         </ul>
-                    </div>
-                    
-                </li>
-            </ul>
+                    </li>
+                    <li (click)="active = !active" [ngClass]="toggleClass()">
+                        <div class="menuItemParent">
+                            <a href="javscript:;" class="firstLevel">
+                                <span class="icon"><i class="icofont-home"></i></span>
+                                <span>Home</span>
+                            </a>
+                            <span class="childExpand">
+                                <span class="icon ionicIcons byDefault"><i class="icofont-rounded-down"></i></span>
+                            </span> 
+                        </div>
+                        <ul class="subNavigation">
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li (click)="active = !active" [ngClass]="toggleClass()">
+                        <div class="menuItemParent">
+                            <a href="javscript:;" class="firstLevel">
+                                <span class="icon"><i class="icofont-home"></i></span>
+                                <span>Home</span>
+                            </a>
+                            <span class="childExpand">
+                                <span class="icon ionicIcons byDefault"><i class="icofont-rounded-down"></i></span>
+                            </span> 
+                        </div>
+                        <ul class="subNavigation">
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li (click)="active = !active" [ngClass]="toggleClass()">
+                        <div class="menuItemParent">
+                            <a href="javscript:;" class="firstLevel">
+                                <span class="icon"><i class="icofont-home"></i></span>
+                                <span>Home</span>
+                            </a>
+                            <span class="childExpand">
+                                <span class="icon ionicIcons byDefault"><i class="icofont-rounded-down"></i></span>
+                            </span> 
+                        </div>
+                        <ul class="subNavigation">
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li (click)="active = !active" [ngClass]="toggleClass()">
+                        <div class="menuItemParent">
+                            <a href="javscript:;" class="firstLevel">
+                                <span class="icon"><i class="icofont-home"></i></span>
+                                <span>Home</span>
+                            </a>
+                            <span class="childExpand">
+                                <span class="icon ionicIcons byDefault"><i class="icofont-rounded-down"></i></span>
+                            </span> 
+                        </div>
+                        <ul class="subNavigation">
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>About ForKeeps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>    
+                </ul>
+            </div> 
         </div>
     </div>
-</div>
+</div> 

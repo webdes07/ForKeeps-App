@@ -2,6 +2,10 @@
     text-align: center; 
     width: 25px;
     cursor: pointer;
+    position: absolute;
+    transition: all ease 0.5s;
+    top: 63px;
+    right: 45px; 
     & > div { 
         width: 100%; 
         margin: 0 auto; 
@@ -12,5 +16,92 @@
     & > div:nth-child(3) { width: 6px;}
     & > div + div { 
         margin-top: 4px;
+    }
+}
+.hamburgBtnOuter.open { 
+    right: 500px;
+    transform: rotate(-90deg);
+}
+ 
+.navigationLinks {
+    transform: translateX(100%);
+    height: 100vh;
+    background: #fff;
+    width: 450px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto; 
+    transition: all ease 0.5s;
+    padding: 30px;
+    & > div > ul > li { 
+        border-top: 1px solid rgba(112,112,112,.3);
+        div { 
+            position: relative;
+        }
+        a { 
+            padding: 15px 5px;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            color: #000; 
+            span + span { 
+                padding-left: 12px;
+            }
+            i { 
+                font-size: 24px;
+            }
+        }
+        .childExpand {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            right: 10px;
+            font-size: 24px;
+        }
+        ul {
+            display: none;
+            
+        }
+    }
+    & > div > ul > li.active { 
+        ul {
+            display: block;
+            border-top: 1px solid  rgba(112,112,112,.3);
+        }
+        .childExpand  { 
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    & > div > ul > li:last-child { 
+        border-bottom: 1px solid rgba(112,112,112,.3);
+    }
+}
+.navigationLinks.open-menu{
+    transform: translateX(0px);
+}
+
+.loginButton {
+    text-align: right;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    & a span {
+        display: inline-block;
+        vertical-align: middle;  
+    }
+    & a > span + span { 
+        padding-left: 7px;
+    } 
+    & i { 
+        font-size:22px ;
+    }
+}
+
+.closeBtn {
+    font-size: 22px;
+    padding: 5px 0; 
+    & span {
+        cursor: pointer;
     }
 }

@@ -1,8 +1,12 @@
+ .bodyHeader {
+    padding: 50px 42px 35px;
+}
+
 .header_logo {
     max-width: 200px;
 }
 .userProfile { 
-    width: calc( 50% - 200px );
+    width: calc( 50% - 100px );
     .userProfileInner > div + div {
         padding-left: 20px ;
     }
@@ -15,7 +19,7 @@
 .profileImage {
     width: 42px;
     height: 42px;
-    background: #d2d2d2;
+    background: #fff;
     padding: 4px;
     border-radius: 10px;
 }
