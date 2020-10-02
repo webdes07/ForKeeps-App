@@ -1,0 +1,39 @@
+.sign_up_inner { 
+    background: rgba(255, 255, 255, 80%);
+}
+form{
+    width:50%;
+    margin: 0 auto;
+}
+.form_progress_section {
+    position: relative;
+    width: 100%;
+    &::before, &::after{
+        content: '';
+        display: block;
+        width: 37%;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+    &::before{
+        left: 0;
+    }
+    &::after{
+        right: 0
+    }
+}
+
+.two_input > input,.two_input > button {
+    margin-right:7.5px;
+    margin-left: 7.5px;
+    &:first-child{
+        margin-left: 0;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.two_input > button:nth-child(2){
+    margin-left: 0;
+}

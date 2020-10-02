@@ -1,5 +1,6 @@
-// // Font Awesome 
+// Font Awesome 
 @import url('./assets/coded-files/icofont.css');
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 // Import Fonts
   @font-face{
@@ -146,8 +147,10 @@ h1,h2,h3{
 h4,h5,h6 { 
     font-weight: 400; 
 }
+
+
 /* Font Size GLobal */
-$font-sizes: ("h1": 44, "h2": 26, "h3": 22, "h4": 18, "h5": 16, "h6": 14);
+$font-sizes: ("h1": 48, "h2": 26, "h3": 24, "h4": 22, "h5": 20, "h6": 18);
 @each $name, $value in $font-sizes {
     #{$name}, .#{$name}{
         font-size: #{$value}+px;
@@ -164,6 +167,14 @@ $font-weights: ("black": "800", "bold": "700", "semi-bold": "600", "medium": "50
         }
     }
 }
+.font9 { font-size: 9px;}
+.font12 { font-size: 12px;}
+.font14 { font-size: 14px;}
+
+.lh1_45 { line-height: 1.45;}
+
+
+
 * + h1, * + h2 { margin-top:20px; }
 * + h3, * + h4 { margin-top:15px; }
 * + h5, * + h6  { margin-top:10px; }
@@ -172,9 +183,12 @@ $font-weights: ("black": "800", "bold": "700", "semi-bold": "600", "medium": "50
 img { max-width:$full_width; height:auto; border:none; vertical-align:middle; }
 /* A Tag */ 
 a { 
-    text-decoration:none; color:$primary-color; @include transition(all ease-in-out 0.3s);
+    text-decoration:none; 
+    color:$secondary-color; 
+    cursor: pointer;
+    @include transition(all ease-in-out 0.3s);
     &:hover, &:focus{
-        color: $secondary-color;
+        color: $primary-color;
     }
 }
 
@@ -183,7 +197,7 @@ a {
 
 ul { margin:0; padding:0; list-style:none; } 
 
-.set-bg, .bg{ background-size:cover; background-position:center; position:relative; background-repeat: no-repeat; }
+.set-bg, .bg{ background-size:cover !important; background-position:center !important; position:relative !important; background-repeat: no-repeat !important; }
 .overlay{ 
     position: relative;
     & > * { 
@@ -191,39 +205,61 @@ ul { margin:0; padding:0; list-style:none; }
         z-index: 2;
     }
     &::before{
-        content:'';  top:0; left:0; width:100%; height:100%; position:absolute; background:rgb(255 255 255 / 40%);
+        content:'';  top:0; left:0; width:100%; height:100%; position:absolute; background:rgb(255 255 255 / 80%);
     }
 }
 .get-bg { display:none !important; }
 
 /* Buttons */
-a.button, .button a { 
-    max-width: 100%; 
+a.button, .button a,button.button, .button button { 
+    width: 330px;
+    height: 43px;
     display: inline-block; 
-    line-height: 1; 
-    border-radius: 0;  
-    text-transform: uppercase; 
+    line-height: 1.25; 
+    border-radius: 4px;   
     position: relative; 
-    font-size: 18px; 
+    font-size: 20px; 
     font-weight: 500; 
-    background-color: #E6BDAC; 
-    padding: 18px 25px 15px; 
-    border: 1px solid #E6BDAC;
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color; 
+    color: #fff;
+    @include transition(all ease-in-out 0.3s);
+    outline: none;
+    cursor: pointer;
     &:hover{
-        background-color: #fff;
+        background-color: transparent;
         color: $secondary-color;
     }
 }
 
-.button.v2 a , a.button.v2 { 
-    background:#fff; 
-    color:#E6BDAC;
+.button.v2 a , a.button.v2,.button.v2 button , button.button.v2 { 
+    background:transparent; 
+    color:$secondary-color;
     &:hover{
-        background: #fff; 
-        color: #1996cd; 
+        background: $secondary-color; 
+        color: #fff;
     }
 }
 
+.play_button{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: $secondary-color;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    line-height: 44px; 
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+    @include transition(all ease 0.3s);
+    &:hover{
+        background: transparent;
+        color: $secondary-color;    
+    }
+}
 .icon i { color: $secondary-color;}
 
 /* Text Alignment */
@@ -243,66 +279,68 @@ a.button, .button a {
 .ib.vt { vertical-align:top !important;  }
 
 /* Form Global */ 
-textarea, input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {  
+textarea, input[type="text"], input[type="number"], input[type="email"], input[type="tel"],input[type="date"], input[type="password"], select {  
     display: block; 
-    border: 1px solid #E6BDAC; 
+    border: 1px solid #fff; 
     outline: 0; 
-    background: #f8f8f8; 
-    font-size: 22px; 
-    line-height: 16px; 
+    background: #fff; 
+    font-size: 20px; 
+    line-height: 25px; 
     font-family: inherit; 
     color: #000;
     margin: 0; 
-    padding: 13px 20px 9px; 
+    padding: 10px 14px; 
     width: 100% !important; 
-    border-radius: 0; 
-    font-weight: 500; 
+    border-radius: 5px; 
+    font-weight: 400; 
     @include box-shadow(none);
+    margin-bottom: 15px;
 }
+legend{ width: 100% }
 textarea { 
     min-height:150px; 
 }
-form input[type="radio"],form input[type="checkbox"] {  
-    display:none;
-    &+span{
-        position:relative;
-        display:block; 
-        padding-left:30px; 
-        cursor:pointer;
-        &::before{
-            content:"\f00c"; 
-            font-family:fontawesome; 
-            color:#6b1631 ; 
-            position:absolute; 
-            left:4px; 
-            top:4px; 
-            font-size:0; 
-            width:15px; 
-            height:15px; 
-            display:block; 
-            border:1px solid #ccc;
-            @include transition(all ease 0.3s);
-            text-align:center; 
-            line-height:14px 
-        }
-    }
-}
-form input[type="radio"] {  
-    &+span:before{
-        border-radius:50%
-    }
-    &:checked+span:before{
-        background:#6b1631 ; 
-        border-color:#6b1631;
-    }
+// form input[type="radio"],form input[type="checkbox"] {  
+//     display:none;
+//     &+span{
+//         position:relative;
+//         display:block; 
+//         padding-left:30px; 
+//         cursor:pointer;
+//         &::before{
+//             content:"\f00c"; 
+//             font-family:fontawesome; 
+//             color:#6b1631 ; 
+//             position:absolute; 
+//             left:4px; 
+//             top:4px; 
+//             font-size:0; 
+//             width:15px; 
+//             height:15px; 
+//             display:block; 
+//             border:1px solid #ccc;
+//             @include transition(all ease 0.3s);
+//             text-align:center; 
+//             line-height:14px 
+//         }
+//     }
+// }
+// form input[type="radio"] {  
+//     &+span:before{
+//         border-radius:50%
+//     }
+//     &:checked+span:before{
+//         background:#6b1631 ; 
+//         border-color:#6b1631;
+//     }
     
- }
-form input[type="checkbox"]:checked+span:before {  
-    border-color:#6b1631 ; 
-    font-size:12px;  
-    color:#fff; 
-    letter-spacing:0; 
-}
+//  }
+// form input[type="checkbox"]:checked+span:before {  
+//     border-color:#6b1631 ; 
+//     font-size:12px;  
+//     color:#fff; 
+//     letter-spacing:0; 
+// }
 input[type="submit"] { 
     cursor: pointer; 
     outline: 0; 
@@ -322,7 +360,19 @@ input[type="submit"] {
         background-color:#fff; 
         color: #E6BDAC
     }
-} 
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    legend h3{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        color: $secondary-color;
+    }
+}
 
 /* Widths */
 @for $i from 1 through 10 { 
@@ -370,6 +420,8 @@ input[type="submit"] {
     }
 } 
 
+.py45 { padding-left: 45px; padding-right: 45px; }
+
 /*  Display Options  */
 .d_flex { display:flex; justify-content: center; align-items: center;}
 .justify_flex-start { justify-content: flex-start;}
@@ -378,6 +430,8 @@ input[type="submit"] {
 .justify_space-evenly { justify-content: space-evenly;}
 .align_flex-start { align-items: flex-start;}
 .align_flex-end { align-items: flex-end;}
+
+.hidden { display: none !important;}
 
 /****************************************************************
                            Main Body 
@@ -395,6 +449,13 @@ input[type="submit"] {
 }
 
 
+
+// Sign Up section 
+.form_progress_section { 
+    &::before, &::after{
+        border: 1px solid $secondary-color;
+    }
+} 
 
 
 
@@ -543,3 +604,5 @@ Responsive Media Queries CSS
   @media (max-width:480px ) {
      
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

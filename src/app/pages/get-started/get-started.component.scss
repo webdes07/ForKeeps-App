@@ -1,0 +1,9 @@
+.get_started_outer {
+    height: calc( 100vh - 128px );
+}
+
+.action_buttons{
+    & > div + div {
+        margin-top: 5px;
+    }
+}
