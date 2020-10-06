@@ -45,3 +45,17 @@ form{
 }   
 
 
+@media (max-width: 767px){
+    form { width: 100% }
+    .sign_up_inner { padding: 0 15px;}
+}
+@media (max-width:640px ) {
+    form .two_input{
+        flex-wrap: wrap;
+        input { 
+            width: 100%;
+        }
+    }
+    form .otp_input { width: 100% !important;}
+    .form_progress_section::before, .form_progress_section::after{ width: 10%;}
+}

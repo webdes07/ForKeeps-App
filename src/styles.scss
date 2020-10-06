@@ -99,6 +99,9 @@ $icon-font: 'icoFont';
 $primary-color: #000;
 $secondary-color: #AC3EF9;
 
+.color_1 { color: $primary-color}
+.color_2 { color: $secondary-color }
+
 // Widths
 $full_width: 100%;
 $container_width: 1470px;
@@ -140,7 +143,7 @@ body {
     color:$primary-color; 
     font-family: $primary-font;
 }
-h1,h2,h3,h4,h5,h6{  margin:0; padding:0;   }
+h1,h2,h3,h4,h5,h6,p{  margin:0; padding:0;   }
 h1,h2,h3{
     font-weight: 700;
 }
@@ -171,8 +174,10 @@ $font-weights: ("black": "800", "bold": "700", "semi-bold": "600", "medium": "50
 .font12 { font-size: 12px;}
 .font14 { font-size: 14px;}
 
+.lh1 { line-height: 1;}
 .lh1_45 { line-height: 1.45;}
-
+.lh1_5 { line-height: 1.5;}
+.lh2  { line-height: 2}
 
 
 * + h1, * + h2 { margin-top:20px; }
@@ -387,7 +392,7 @@ fieldset {
         }
     }
 }
- 
+.w-73{ width: 73% !important;}
 .mauto { margin: 0 auto ;}
 /*unique paddings*/
 
@@ -448,7 +453,7 @@ fieldset {
 }
 
 .siteWrapper.open-menu{
-    transform: translateX(-400px);
+    transform: translateX(-445px);
 }
 
 
@@ -460,6 +465,11 @@ fieldset {
     }
 } 
 
+
+// Feature Box Variable Styling
+.feature_box button .box_inner_icon{
+    background-color: $secondary-color;
+}
 
 
 
@@ -594,10 +604,17 @@ Responsive Media Queries CSS
     .mobile-center.text-right { text-align:center; }
     .mw100 { width: $full_width }
     .mdb { display: block } 
+    .py45 { padding-left: 15px; padding-right: 15px; }
 
+    //  Button 
+    a.button, .button a, button.button, .button button{ width: 80%; font-size: 14px; height: 36px; }
     /* Flex */
     .d_flex.mob_flex_wrap { flex-wrap: wrap;}
-     
+
+    // Main div on menu click
+    .siteWrapper.open-menu {
+        transform: translateX(-250px);
+    } 
   }
   
   @media (max-width:640px ) {
