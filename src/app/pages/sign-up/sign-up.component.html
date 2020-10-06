@@ -6,9 +6,9 @@
         <div class="section_sub-title regular">
             <h5>We need some basic information to create a ForKeeps Account using 3 easy steps</h5>
         </div>  
-        <form action="/action_page.php" class="pt25">
-            <fieldset>
-                <legend class="pb20">
+        <form action="" class="pt25 pb100">
+            <fieldset class="form_fieldset open">
+                <legend class="pb30">
                     <div class="form_progress_section">
                         <h2>Step <span id="form_step_current">1</span> of <span id="form_step_total">3</span></h2>
                     </div>
@@ -23,18 +23,18 @@
                     <input type="date" name="dob" placeholder="Date of Birth" id="dob">
                 </div>
                 <input type="email" id="email" name="email" placeholder="Email Address">
-            </fieldset>
-            <fieldset>
-                <legend class="pb20">
+            </fieldset >
+            <fieldset class="hidden form_fieldset">
+                <legend class="pb30">
                     <div class="form_progress_section">
                         <h2>Step <span id="form_step_current">2</span> of <span id="form_step_total">3</span></h2>
                     </div>
                     <h3>Verify your OTP</h3>
                 </legend>
-                <input type="number" name="otp_input" placeholder="Enter your otp" id="otp_input">
+                <input type="number" name="otp_input" placeholder="Enter your otp" id="otp_input" class="w-50  otp_input">
             </fieldset>
-            <fieldset>
-                <legend class="pb20">
+            <fieldset class="hidden form_fieldset">
+                <legend class="pb30">
                     <div class="form_progress_section">
                         <h2>Step <span id="form_step_current">3</span> of <span id="form_step_total">3</span></h2>
                     </div>
@@ -44,21 +44,20 @@
                     <input type="password" name="password" placeholder="Choose password" id="password">
                     <input type="password" name="confirm_pass" placeholder="Confirm password" id="confirm_pass">
                 </div>
-                <div class="term_condition_section">
+                <div class="term_condition_section d_flex pb15">
                     <input type="checkbox" name="term_condition" id="term_condition">
-                    <span><h5>I accept the <a>term & conditions</a></h5></span>
+                    <span><h5> I accept the <a>term & conditions</a></h5></span>
                 </div>
             </fieldset>
 
-            <fieldset> 
-                <div class="Sign_up_section d_flex two_input">
-                    <button class="button v2 w-50  hidden" id="back_btn">Back</button>
-                    <button class="button v1 w-50" id="back_btn">Next</button>
-                    <button class="button v1 w-50" id="back_btn">Register</button>
+            <fieldset > 
+                <div class="Sign_up_section d_flex two_input justify_space-between">
+                    <button class="button v2 hidden" id="back_btn" (click)="buttonClick('back')">Back</button>
+                    <button class="button v1 w-100" id="next_btn" (click)="buttonClick('next')">Next</button>
+                    <button class="button v1 hidden" id="register_btn">Register</button>
                 </div> 
-                <button class="button v2 w-100" id="back_btn">Already registered? Sign in</button> 
+                <button class="button v2 w-100 " id="create_acc_btn">Already registered? Sign in</button> 
             </fieldset>
-        </form>
- 
+        </form> 
     </div>
 </div>

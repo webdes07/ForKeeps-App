@@ -269,14 +269,16 @@ a.button, .button a,button.button, .button button {
 .text-left { text-align:left; }
 
 /* Placeholder */
-::-webkit-input-placeholder { opacity:1 !important; color:inherit !important; }
-::-moz-placeholder { opacity:1 !important; color:inherit !important; }
-:-ms-input-placeholder { opacity:1 !important; color:inherit !important;}
+::-webkit-input-placeholder { opacity:0.6 !important; color:inherit !important; }
+::-moz-placeholder { opacity:0.6 !important; color:inherit !important; }
+:-ms-input-placeholder { opacity:0.6 !important; color:inherit !important;}
 
 /* Float */  
 .fl { float:left; }
 .fr { float:right; }
 .ib.vt { vertical-align:top !important;  }
+
+.mauto { margin: 0 auto;}
 
 /* Form Global */ 
 textarea, input[type="text"], input[type="number"], input[type="email"], input[type="tel"],input[type="date"], input[type="password"], select {  
@@ -288,9 +290,9 @@ textarea, input[type="text"], input[type="number"], input[type="email"], input[t
     line-height: 25px; 
     font-family: inherit; 
     color: #000;
-    margin: 0; 
+    margin: 0 ; 
     padding: 10px 14px; 
-    width: 100% !important; 
+    width: 100% ; 
     border-radius: 5px; 
     font-weight: 400; 
     @include box-shadow(none);
@@ -377,15 +379,16 @@ fieldset {
 /* Widths */
 @for $i from 1 through 10 { 
     .w-#{$i*10} {
-        width: $i*10%;
+        width: $i*10% !important;
     }
     @if $i != 10 {
         .w-#{$i*10+5} {
-            width: $i*10%+5%;
+            width: $i*10%+5% !important;
         }
     }
 }
  
+.mauto { margin: 0 auto ;}
 /*unique paddings*/
 
 // Bottom padding 

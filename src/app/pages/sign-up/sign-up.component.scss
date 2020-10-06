@@ -4,6 +4,26 @@
 form{
     width:50%;
     margin: 0 auto;
+    .two_input
+    {
+        justify-content: space-between;
+        > input {
+            width: 49%;
+        }
+    } 
+    .Sign_up_section > button{
+        width: 49%; 
+    }
+    #create_acc_btn {
+        width: 100%;
+        margin-top: 13px;   
+    }
+    .term_condition_section > span {
+        padding-left: 5px;
+    }
+    .otp_input { 
+        margin: 0 auto 15px;
+    }
 }
 .form_progress_section {
     position: relative;
@@ -22,18 +42,6 @@ form{
     &::after{
         right: 0
     }
-}
+}   
 
-.two_input > input,.two_input > button {
-    margin-right:7.5px;
-    margin-left: 7.5px;
-    &:first-child{
-        margin-left: 0;
-    }
-    &:last-child{
-        margin-right: 0;
-    }
-}
-.two_input > button:nth-child(2){
-    margin-left: 0;
-}
+

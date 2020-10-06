@@ -1,0 +1,29 @@
+.log_in_outer {
+    height: calc( 100vh - 128px );
+    .login_from_outer{
+        form{
+            text-align: center;
+            fieldset {
+                width: 300px;
+                margin: 0 auto;
+            }
+            input{
+                border: 1px solid #707070
+            }
+            input, button {
+                width: 100%;
+                margin-bottom: 20px;
+                }
+            }
+        }
+        a, .new_registration h6 { 
+            font-size: 18px;
+            line-height: 27px;
+        } 
+        .about_app { 
+            width: 600px;
+            margin: 0 auto;
+        } 
+}
+
+
