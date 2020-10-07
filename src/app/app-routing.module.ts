@@ -8,14 +8,10 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: GetStartedComponent},
-  { path: 'sign-up', component: SignUpComponent},
-  { path: 'login', component: LogInComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'home', component: HomeComponent,
-  children: [
-    {path: 'album', component: AlbumComponent}
-  ]
-  }
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'login', component: LogInComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home/album', component: AlbumComponent }
 ];
 
 @NgModule({

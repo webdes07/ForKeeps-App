@@ -1,5 +1,5 @@
 .log_in_outer {
-    height: calc( 100vh - 128px );
+    min-height: calc( 100vh - 128px );
     .login_from_outer{
         form{
             text-align: center;
