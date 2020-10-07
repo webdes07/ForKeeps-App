@@ -1,21 +1,33 @@
-<div class="home_page_outer py45 ">
+<div class="home_page_outer py45 pb80">
   <div class="home_page_inner w-100">
-    <div class="home_page_two_col d_flex justify_space-between">
+    <div class="home_page_two_col d_flex justify_space-between align_flex-start">
       <div class="features_section w-25">
-        <div class="sub_section_heading bold color_2 lh1 pb20">
+        <div class="sub_section_heading bold color_2 lh1 pb10">
           <h3>What would you like to do?</h3>
         </div>
-        <div class="sub_section_sub_heading medium lh1 pb10">
+        <div class="sub_section_sub_heading bold lh1 pb15">
           <p>Digital Photo Album</p>
         </div>
         <app-feature-box></app-feature-box>
-        <div class="sub_section_sub_heading medium lh1 pb10 pt20">
+        <div class="sub_section_sub_heading bold lh1 pb15 pt40">
           <p>AfterLife Message</p>
         </div>
-        <app-feature-box></app-feature-box>
+        <app-feature-box></app-feature-box> 
       </div>
-      <div class="home_page_slider w-73"></div>
+      <div class="home_page_slider w-73">
+        <div class="section_heading lh1 py20">
+          <h1>Hello</h1>
+        </div>
+        <div class="user_message d_flex justify_flex-start align_baseline py20">
+          <span class="lh1_4"><h3>Clint Hendricks</h3></span>
+          <span class="pl30 lh1_4"><h6>How would you like to keep your memories alive?</h6></span>
+        </div>
+        <div class="home_slider">
+          <app-feature-slider></app-feature-slider>
+        </div>
+      </div>
     </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

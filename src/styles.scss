@@ -1,6 +1,7 @@
 // Font Awesome 
-@import url('./assets/coded-files/icofont.css');
-@import "~@ng-select/ng-select/themes/default.theme.css";
+@import url('./assets/coded-files/icofont.css'); 
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 // Import Fonts
   @font-face{
@@ -136,7 +137,7 @@ $container_width: 1470px;
 *{ @include box-sizing(border-box)}
 body { 
     margin:0; 
-    padding:0; 
+    padding:0;  
     font-size:16px; 
     line-height:1.2;  
     font-weight:normal; 
@@ -175,8 +176,10 @@ $font-weights: ("black": "800", "bold": "700", "semi-bold": "600", "medium": "50
 .font14 { font-size: 14px;}
 
 .lh1 { line-height: 1;}
+.lh1_4 { line-height: 1.4}
 .lh1_45 { line-height: 1.45;}
 .lh1_5 { line-height: 1.5;}
+.lh1_8 { line-height: 1.8;}
 .lh2  { line-height: 2}
 
 
@@ -401,6 +404,7 @@ fieldset {
     .pb#{$i*10},.p#{$i*10}-0 {
         padding-bottom: $i*10px;
     } 
+
     @if $i == 0 {
         .pr#{$i}, .p#{$i}-0{
             padding-right: $i;
@@ -413,14 +417,14 @@ fieldset {
         .pb#{$i*10+5},.p#{$i*10+5}-0 {
             padding-bottom: $i*10px+5px;
         } 
-    }
-
+    } 
 }
+
 // Top Padding 
 @for $i from 0 through 15 {
     .pt#{$i*10},.p#{$i*10}-0 {
         padding-top: $i*10px;
-    } 
+    }  
     @if $i <= 6 {
         .pt#{$i*10+5},.p#{$i*10+5}-0 {
             padding-top: $i*10px+5px;
@@ -438,6 +442,7 @@ fieldset {
 .justify_space-evenly { justify-content: space-evenly;}
 .align_flex-start { align-items: flex-start;}
 .align_flex-end { align-items: flex-end;}
+.align_baseline { align-items: baseline;}
 
 .hidden { display: none !important;}
 
@@ -471,6 +476,27 @@ fieldset {
     background-color: $secondary-color;
 }
 
+// Slider Dots 
+.feature_slider_item { 
+    .slider_item_tag {
+        background: $secondary-color;
+    }
+}
+
+
+.owl-theme .owl-dots .owl-dot{
+    span { 
+        width: 8px;
+        height: 8px;
+        background: #000;
+        margin: 5px 7.5px;
+    }
+    &.active, &:hover {
+        span {
+            background: $secondary-color;
+        }
+    }
+}  
 
 
 
@@ -501,6 +527,22 @@ Responsive Media Queries CSS
     .pl30 { padding-left: 30px; }
     .pr30 { padding-right: 30px; }
     .desktopNone { display:none !important }
+
+    @for $i from 0 through 15 { 
+        .pr#{$i*10},.py#{$i*10} {
+            padding-right: $i*10px;
+        }
+        .pr#{$i*10+5},.py#{$i*10+5} {
+            padding-right: $i*10px+5px;
+        }
+        .pl#{$i*10},.py#{$i*10} {
+            padding-left: $i*10px;
+        }
+        .pl#{$i*10+5},.py#{$i*10+5} {
+            padding-left: $i*10px+5px;
+        }
+    }
+
   }
   
   @media (min-width: 992px ){ 
@@ -623,6 +665,4 @@ Responsive Media Queries CSS
   
   @media (max-width:480px ) {
      
-  }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  } 

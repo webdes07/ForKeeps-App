@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AlbumComponent } from './pages/album/album.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
@@ -9,7 +10,12 @@ const routes: Routes = [
   { path: '', component: GetStartedComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'login', component: LogInComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent,
+  children: [
+    {path: 'album', component: AlbumComponent}
+  ]
+  }
 ];
 
 @NgModule({
@@ -17,4 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SignUpComponent, LogInComponent, GetStartedComponent, HomeComponent]
+export const routingComponents = [SignUpComponent, LogInComponent, GetStartedComponent, HomeComponent, AlbumComponent]

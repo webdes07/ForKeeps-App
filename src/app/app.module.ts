@@ -16,10 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { FeatureBoxComponent } from './reusable-component/feature-box/feature-box.component'; 
+import { FeatureBoxComponent } from './reusable-component/feature-box/feature-box.component';
+import { FeatureSliderComponent } from './reusable-component/feature-slider/feature-slider.component'; 
+import { CarouselModule } from 'ngx-owl-carousel-o'; 
  
-
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { FeatureBoxComponent } from './reusable-component/feature-box/feature-bo
     MenuComponent,
     GetStartedComponent,
     routingComponents,
-    FeatureBoxComponent 
+    FeatureBoxComponent,
+    FeatureSliderComponent 
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { FeatureBoxComponent } from './reusable-component/feature-box/feature-bo
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
