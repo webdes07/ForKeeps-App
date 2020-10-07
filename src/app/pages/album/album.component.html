@@ -1,1 +1,30 @@
-<p>album works!</p>
+<div class="album_outer py45 text-center d_flex py45">
+  <div class="album_inner w-100 pb100">
+    <div class="section_logo color_2">
+      <div class="section_logo_inner"><i class="icofont-infinite"></i></div>
+    </div>
+    <div class="section_heading color_2 pb60">
+      <h2>Digital Photo Album</h2>
+    </div>
+    <div class="section_detail pb30">
+      <h5>Create a beautifully designed Digital Photo Album in less than 2 mins for any occasion, or view your Albums,
+        Search our Album Library or even Bookmark your favorite albums for easy access.</h5>
+    </div>
+    <div class="action_button_outer d_flex justify_space-between pb40">
+      <div class="action_button button v2 w-20">
+        <button class="w-100" routerLink= 'selected_albums'>Create a new Albums</button>
+      </div>
+      <div class="action_button button v2 w-20">
+        <button class="w-100" routerLink= 'my_albums'>My Albums</button>
+      </div>
+      <div class="action_button button v2 w-20">
+        <button class="w-100" routerLink= 'search_albums'>Search Albums</button>
+      </div>
+      <div class="action_button button v2 w-20">
+        <button class="w-100" routerLink= 'booked_albums'>Bookmark Albums</button>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

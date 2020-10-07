@@ -18,7 +18,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { FeatureBoxComponent } from './reusable-component/feature-box/feature-box.component';
 import { FeatureSliderComponent } from './reusable-component/feature-slider/feature-slider.component'; 
-import { CarouselModule } from 'ngx-owl-carousel-o'; 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
  
  
 @NgModule({
@@ -32,7 +33,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     GetStartedComponent,
     routingComponents,
     FeatureBoxComponent,
-    FeatureSliderComponent 
+    FeatureSliderComponent
   ],
   imports: [
     BrowserModule,

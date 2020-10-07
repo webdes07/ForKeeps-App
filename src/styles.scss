@@ -1,5 +1,6 @@
 // Font Awesome 
-@import url('./assets/coded-files/icofont.css'); 
+@import url('./assets/coded-files/icofont.css');
+ 
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
@@ -174,6 +175,7 @@ $font-weights: ("black": "800", "bold": "700", "semi-bold": "600", "medium": "50
 .font9 { font-size: 9px;}
 .font12 { font-size: 12px;}
 .font14 { font-size: 14px;}
+.font28 { font-size: 28px;}
 
 .lh1 { line-height: 1;}
 .lh1_4 { line-height: 1.4}
